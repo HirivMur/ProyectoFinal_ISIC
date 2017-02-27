@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block contenido %}
+          
+                <div class="row">
+                    <h1 class="page-header">
+                            <small>Docentes</small> </h1>
+
+                    <div class="table-responsive">
+                                    <table class="table table-bordered table-hover table-striped">
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Email</th>
+                                                <th>Cubículo</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                        <tbody>
+                                         {% for docente in docentes %}
+                                            <tr>
+                                                <td>{{docente}}</td>
+                                                <td>{{docente.mail}}</td>
+                                                <td>{{docente.cubiculo}}</td>
+                                                <td></td>
+                                            </tr>
+                                           {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                </div>
+
+                <!-- /.row -->
+{% endblock %}
+               
+
+                
+                    
+           
